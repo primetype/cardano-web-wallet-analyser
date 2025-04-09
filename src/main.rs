@@ -13,7 +13,7 @@ fn App() -> Html {
                 <div class="navbar-nav ms-auto">
                     <a
                         class="nav-link"
-                        href="https://primetype.github.io/cardano-web-wallet-analyser"
+                        href="https://github.com/primetype/cardano-web-wallet-analyser"
                         rel="external noreferrer"
                         target="_blank">
                     <icons::Github />
