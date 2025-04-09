@@ -50,8 +50,8 @@ pub fn body() -> Html {
                     <div class="col-md-4">
                         <div class="card h-100">
                             <div class="card-body">
-                                <h5 class="card-title"><i class="bi bi-coin me-2"></i>{"Dust UTxO Detection"}</h5>
-                                <p class="card-text">{"Identify and track dust UTxOs with values less than 1 ADA in your wallet."}</p>
+                                <h5 class="card-title"><i class="bi bi-coin me-2"></i>{"UTxO Management"}</h5>
+                                <p class="card-text">{"Identify UTxOs when to consolidate UTxOs."}</p>
                                 <span class="badge bg-warning">{"Performance Optimization"}</span>
                             </div>
                         </div>
