@@ -13,7 +13,7 @@ pub fn body() -> Html {
             <>
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="card bg-light mb-4">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 <div class="d-flex align-items-center">
                                     <div>

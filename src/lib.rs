@@ -4,6 +4,7 @@
 mod body;
 mod context;
 pub mod icons;
+mod style;
 mod wallet;
 
 pub use self::{
@@ -43,7 +44,7 @@ fn WalletButton(props: &WalletButtonProps) -> Html {
 
     html! {
         <button
-            class={classes!("btn", "btn-light", "d-flex", "flex-fill", "mb-3", active)}
+            class={classes!("btn", "btn-primary", "d-flex", "flex-fill", "mb-3", active)}
             onclick={onclick}>
             <img src={wallet_app_icon} alt={format!("{} logo", wallet_app_name)} class="me-3" />
             <h4 class="mb-0">{&wallet_app_name}</h4>

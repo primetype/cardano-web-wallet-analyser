@@ -91,13 +91,13 @@ impl Component for UtxosView {
                     <div class="mt-4">
                         <h4 class="mb-3">{"UTXOs Analysis"}</h4>
                         <div class="d-flex justify-content-between mb-3">
-                            <div class="card bg-light me-2" style="flex: 1">
+                            <div class="card me-2" style="flex: 1">
                                 <div class="card-body">
                                     <h5 class="card-title">{"Total UTXOs"}</h5>
                                     <p class="card-text fs-3">{total_utxos}</p>
                                 </div>
                             </div>
-                            <div class="card bg-light" style="flex: 1">
+                            <div class="card" style="flex: 1">
                                 <div class="card-body">
                                     <h5 class="card-title">{"Total Value"}</h5>
                                     <p class="card-text fs-3">{format!("{:.2} ₳", total_value_ada)}</p>

@@ -6,13 +6,24 @@ pub enum Action {
     WalletSelected(Wallet),
 }
 
-#[derive(Default, Clone, PartialEq)]
+#[derive(PartialEq)]
 pub struct Context {
     // once a wallet is selected this will be set.
     pub wallet: Option<Wallet>,
 }
 
 pub type ContextHandle = UseReducerHandle<Context>;
+
+impl Context {
+    pub fn new() -> Self {
+        crate::style::initialize_theme();
+        Self { wallet: None }
+    }
+
+    fn reset() -> Self {
+        Self { wallet: None }
+    }
+}
 
 impl Reducible for Context {
     type Action = Action;
@@ -26,11 +37,11 @@ impl Reducible for Context {
                     .unwrap_or_default();
 
                 if toggle {
-                    Rc::new(Self::default())
+                    Rc::new(Self::reset())
                 } else {
                     Rc::new(Self {
                         wallet: Some(wallet),
-                        ..Self::default()
+                        ..Self::reset()
                     })
                 }
             }
@@ -46,7 +57,7 @@ pub struct ContextProviderProps {
 
 #[function_component]
 pub fn AppContextProvider(props: &ContextProviderProps) -> Html {
-    let msg = use_reducer(|| Context::default());
+    let msg = use_reducer(|| Context::new());
 
     html! {
         <ContextProvider<ContextHandle> context={msg}>
